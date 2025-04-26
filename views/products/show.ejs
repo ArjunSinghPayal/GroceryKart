@@ -1,0 +1,24 @@
+<h2><%= product.name %></h2>
+
+<ul class="list-group mb-3">
+  <li class="list-group-item">Price: $<%= product.price %></li>
+  <li class="list-group-item">
+    Category:
+    <a href="/products?category=<%= product.category %>"
+      ><%= product.category %></a
+    >
+  </li>
+</ul>
+
+<a href="/products" class="btn btn-secondary">All Products</a>
+<a href="/products/<%= product.id %>/edit" class="btn btn-warning"
+  >Edit Product</a
+>
+
+<form
+  action="/products/<%= product.id %>?_method=DELETE"
+  method="POST"
+  class="d-inline"
+>
+  <button class="btn btn-danger">Delete</button>
+</form>

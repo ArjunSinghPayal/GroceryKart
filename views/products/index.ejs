@@ -1,0 +1,21 @@
+<h1 class="mb-4"><%= category %> Products:</h1>
+
+<div class="row">
+  <% for(product of products) { %>
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= product.name %></h5>
+        <p class="card-text">$<%= product.price %></p>
+        <a href="/products/<%= product.id %>" class="btn btn-primary"
+          >View Product</a
+        >
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<% if(category !== "All") { %>
+<a href="/products" class="btn btn-secondary">View All Products</a>
+<% } %>

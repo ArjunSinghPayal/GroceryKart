@@ -1,0 +1,41 @@
+<h1 class="mb-4">Add a New Product</h1>
+
+<form action="/products" method="POST" class="mb-3">
+  <div class="mb-3">
+    <label for="name" class="form-label">Product Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Product name"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input
+      type="number"
+      step="0.01"
+      name="price"
+      id="price"
+      placeholder="Price"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+    <select name="category" id="category" class="form-select">
+      <% for(category of categories) { %>
+      <option value="<%= category %>"><%= category %></option>
+      <% } %>
+    </select>
+  </div>
+
+  <button class="btn btn-success">Add Product</button>
+</form>
+
+<a href="/products" class="btn btn-secondary">Back to Products</a>
