@@ -2,33 +2,44 @@
 
 🛒 GroceryKart
 
-    A simple yet powerful CRUD app to manage your grocery store's inventory. Built with Express, MongoDB, Mongoose, and a sprinkle of Bootstrap magic!
+- A simple yet powerful CRUD app to manage your grocery store's inventory. Built with Express, MongoDB, Mongoose, and a sprinkle of Bootstrap magic!
+
+* A powerful CRUD app for managing farms and their products — built with Express, MongoDB, Mongoose relationships, and a sprinkle of Bootstrap magic!
 
 ✨ Features
 
-    📋 Create, Read, Update, and Delete products easily.
+     📋 Create, Read, Update, and Delete products easily.
 
-    🔍 Filter products by category like fruits, vegetables, and dairy.
+     🔍 Filter products by category like fruits, vegetables, and dairy.
 
-    🎨 Beautiful UI with Bootstrap 5 styling.
+     🎨 Beautiful UI with Bootstrap 5 styling.
 
-    ⚡ Dynamic form validations and smart error handling.
+     ⚡ Dynamic form validations and smart error handling.
 
-    🧹 Clean MVC-style folder structure (views/products, partials, layout).
+     🧹 Clean MVC-style folder structure (views/products, partials, layout).
 
-    🔥 Fully responsive design — looks good on mobile, tablet, and desktop!
+     🔥 Fully responsive design — looks good on mobile, tablet, and desktop!
+
+-
+- 🌾 Supports farm-product relationships — link products to farms and vice versa.
+-
+- 🔄 Automatically delete farm's products when the farm is deleted (via Mongoose middleware).
+-
+- 📦 Seed script with randomized farm and product data.
 
 🚀 Tech Stack
 
-    Backend: Node.js, Express.js
+     Backend: Node.js, Express.js
 
-    Database: MongoDB (Mongoose ODM)
+- Database: MongoDB (Mongoose ODM)
 
-    Templating: EJS + EJS-Mate (for layouts)
+* Database: MongoDB with Mongoose (object modeling + relationships)
 
-    Styling: Bootstrap 5
+  Templating: EJS + EJS-Mate (for layouts)
 
-    Utilities: Method-Override for PUT and DELETE support
+  Styling: Bootstrap 5
+
+  Utilities: Method-Override for PUT and DELETE support
 
 🛠️ Setup Instructions
 
@@ -46,22 +57,31 @@ npm install
 
 # Make sure MongoDB is running locally
 
-# Then start the server
+- +# Optionally seed the database with:
+  +node seeds.js
 
-node index.js
+  # Then start the server
 
-Visit http://localhost:8080/products to see it in action!
+  node index.js
+
+  Visit http://localhost:8080/products to see it in action!
+
 🤔 Future Improvements
 
-    Add authentication for users.
+     Add authentication for users.
 
-    Improve validation error messages.
+     Improve validation error messages.
 
-    Deploy online on Render, Vercel, or Railway.
+-
+- Add search and filtering by farm.
+-
+- Farm dashboard to show all products with nested rendering.
+
+  Deploy online on Render, Vercel, or Railway.
 
 🧑‍💻 Author
 
-    GitHub: ArjunSinghPayal
+     GitHub: ArjunSinghPayal
 
 🎯 Final Thought
 
