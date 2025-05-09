@@ -1,0 +1,16 @@
+<h1 class="mb-4">All Farms:</h1>
+
+<div class="row">
+  <% for(let farm of farms) { %>
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= farm.name %></h5>
+        <a href="/farms/<%= farm._id %>" class="btn btn-sm btn-primary"
+          >View Farm</a
+        >
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>

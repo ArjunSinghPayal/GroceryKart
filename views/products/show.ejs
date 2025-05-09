@@ -4,10 +4,17 @@
   <li class="list-group-item">Price: $<%= product.price %></li>
   <li class="list-group-item">
     Category:
-    <a href="/products?category=<%= product.category %>"
+    <a
+      class="link-offset-2 link-underline link-underline-opacity-0"
+      href="/products?category=<%= product.category %>"
       ><%= product.category %></a
     >
   </li>
+  <a
+    href="/farms/<%= product.farm._id %>"
+    class="list-group-item list-group-item-action"
+    >Farm: <%= product.farm.name %>
+  </a>
 </ul>
 
 <a href="/products" class="btn btn-secondary">All Products</a>

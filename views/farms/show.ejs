@@ -1,0 +1,33 @@
+<h2><%= farm.name %></h2>
+
+<ul class="list-group mb-3">
+  <li class="list-group-item">City: <%= farm.city %></li>
+  <li class="list-group-item">Email: <%= farm.email %></li>
+</ul>
+
+<h3>Products</h3>
+<ul class="list-group mb-3">
+  <% for(let product of farm.products) { %>
+  <a
+    href="/products/<%= product._id %>"
+    class="list-group-item list-group-item-action"
+    ><%= product.name %>
+  </a>
+  <% } %>
+</ul>
+
+<a href="/farms/<%= farm._id %>/products/new" class="btn btn-success"
+  >Add Product</a
+>
+
+<br class="mb-3" />
+
+<a href="/farms" class="btn btn-secondary">All Farms</a>
+
+<form
+  action="/farms/<%= farm.id %>?_method=DELETE"
+  method="POST"
+  class="d-inline"
+>
+  <button class="btn btn-danger">Delete</button>
+</form>

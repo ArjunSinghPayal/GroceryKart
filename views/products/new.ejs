@@ -1,6 +1,7 @@
-<h1 class="mb-4">Add a New Product</h1>
+<h1 class="mb-4"><%= farm.name %></h1>
+<h2 class="mb-4">Add a New Product</h2>
 
-<form action="/products" method="POST" class="mb-3">
+<form action="/farms/<%= farm._id %>/products" method="POST" class="mb-3">
   <div class="mb-3">
     <label for="name" class="form-label">Product Name</label>
     <input
@@ -38,4 +39,5 @@
   <button class="btn btn-success">Add Product</button>
 </form>
 
+<a href="/farms/<%= farm._id %>" class="btn btn-secondary">Back to Farm</a>
 <a href="/products" class="btn btn-secondary">Back to Products</a>

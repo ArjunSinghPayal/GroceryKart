@@ -14,9 +14,17 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a
+            class="nav-link <%= currentPath === '/farms' ? 'active' : '' %>"
+            href="/farms"
+            >Farms</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
             class="nav-link <%= currentPath === '/products' ? 'active' : '' %>"
             href="/products"
-            >Home</a
+            >Products</a
           >
         </li>
 
@@ -29,7 +37,7 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Categories
+            Product Categories
           </a>
           <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
             <li>
@@ -48,9 +56,9 @@
 
         <li class="nav-item">
           <a
-            class="nav-link <%= currentPath === '/products/new' ? 'active' : '' %>"
-            href="/products/new"
-            >Add Product</a
+            class="nav-link <%= currentPath === '/farms/new' ? 'active' : '' %>"
+            href="/farms/new"
+            >Add Farm</a
           >
         </li>
       </ul>
