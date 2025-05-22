@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const farmSchema = new Schema({
   name: {
     type: String,
-    required: [true, "Farn must have a name!"],
+    required: [true, "Farm must have a name!"],
   },
   city: {
     type: String,
